@@ -78,9 +78,11 @@ dist = setup(
     install_requires = requires,
     extras_require = {'iterparse':['cElementTree >= 1.0.2']},
     tests_require = requires + ['mock >= 0.5.0'],
+    package_data = {
+    '' : [ 'ui/*.html', 'ui/images/*', 'ui/stylesheets/*', 'version.txt' ],
+    },
     include_package_data = True,
     zip_safe = False,
-    namespace_packages = ['supervisor'],
     test_suite = "supervisor.tests",
     entry_points = {
      'supervisor_rpc':['main = supervisor.rpcinterface:make_main_rpcinterface'],

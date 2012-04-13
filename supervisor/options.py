@@ -95,7 +95,7 @@ class Options:
         paths = [os.path.join(here, 'etc', 'supervisord.conf'),
                  os.path.join(here, 'supervisord.conf'),
                  'supervisord.conf', 'etc/supervisord.conf',
-                 '/etc/supervisord.conf']
+                 '/etc/supervisor/supervisord.conf', '/etc/supervisord.conf']
         config = None
         for path in paths:
             if os.path.exists(path):
